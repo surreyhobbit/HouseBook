@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}
+<h1>{{=entry.Party}}</h1>
+<div class="well">
+    Status: {{=entry.Status}}
+</div>
+<div>
+    {{=entry.Comments}}
+    {{if not entry.UKAddress:}} <b>NB: Remember to keep a UK address for this company!!</b>{{pass}}
+</div>
+<div class="well">
+    The reminder was created on {{=entry.created_on}} by {{=entry.created_by}}
+</div>
+{{=BEAUTIFY(response._vars)}}

@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+
+<h1>
+    Address update
+</h1>
+
+Shown below is the worklist of businesses who still have to be informed about the new address
+<p>
+
+<table  class="sktable">
+    <tr>
+        <td>Business</td>
+        <td>created</td>
+        <td>Updated</td>
+    </tr>
+    {{for row in worklist:}}
+    <tr>
+        <td>><a href="{{=URL('show',args=row.id)}}"> {{=row.Party}}</a></td>
+        <td>{{=row.created_on}}</td>
+        <td>{{=row.Updated}}</td>
+    </tr>
+    {{pass}}
+</table>
+
+</p>
+
+<!-- {{=BEAUTIFY(response._vars)}}  -->
