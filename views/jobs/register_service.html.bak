@@ -1,0 +1,3 @@
+{{extend 'layout.html'}}
+<h1>This is the jobs/register_service.html template</h1>
+{{=BEAUTIFY(response._vars)}}
